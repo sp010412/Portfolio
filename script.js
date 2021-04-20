@@ -13,6 +13,3 @@ $(document).ready(function () {
         $('.menu-btn i').toggleClass('.active')
     });
 });
-
-//owl carousel script
-$('.')

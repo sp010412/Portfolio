@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -20,14 +21,14 @@ html {
     position: fixed;
     width: 100%;
     z-index: 999;
-    background: crimson;
+    background: mediumseagreen;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
     padding: 15px 0;
-    background: crimson;
+    background: mediumseagreen;
 }
 
 .navbar .max-width {
@@ -43,7 +44,7 @@ html {
 }
 
 .navbar .logo a span {
-    color: crimson;
+    color: mediumseagreen;
     transition: all 0.3s ease;
 }
 
@@ -65,7 +66,7 @@ html {
 }
 
 .navbar .manu li a:hover {
-    color: crimson;
+    color: mediumseagreen;
 }
 
 .navbar .sticky .manu li a:hover {
@@ -82,34 +83,35 @@ html {
 }
 
 .scroll-up-btn {
-position:fixed;
-height: 45px;
-width: 47px;
-background: crimson;
-right: 30px;
-bottom: 10px;
-text-align: center;
-line-height:45px ;
-color: #fff;
-z-index: 9999;
-font-size:30px ;
-border-radius:6px ;
-cursor: pointer;
-opacity: 0;
-pointer-events: none;
-transition: all 0.3s ease;
+    position: fixed;
+    height: 45px;
+    width: 47px;
+    background: mediumseagreen;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
-.scroll-up-btn.show{
+
+.scroll-up-btn.show {
     bottom: 30px;
     opacity: 1;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 /*about sction*/
 
 .about {
     display: flex;
-    background: url("./images/BEACH\ PIC.JPG")no-repeat center;
+    background: lightblue no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -136,24 +138,24 @@ transition: all 0.3s ease;
 }
 
 .about .about-content .text-3 span {
-    color: crimson;
+    color: mediumseagreen;
     font-weight: 500;
 }
 
 .about .about-content a {
     display: inline-block;
-    background: crimson;
+    background: mediumseagreen;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid mediumseagreen;
     transition: all 0.3s ease;
 }
 
 .about .about-content a:hover {
-    color: crimson;
+    color: mediumseagreen;
     background: none;
 }
 
@@ -204,10 +206,110 @@ section .title::after {
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: mediumseagreen;
     padding: 5px;
     background: #fff;
     transform: translateX(-50%);
+}
+
+/* animated background*/
+
+.d1 {
+    position: absolute;
+    background-image: url(https://cdn5.vectorstock.com/i/1000x1000/32/99/abstract-geometric-background-with-triangles-vector-20903299.jpg);
+    background-size: 2700px 1500px;
+    height: 30vh;
+    width: 15vw;
+    background-position: 0 50%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation: dd1 10s 1, dd12 10s 1;
+    animation-delay: 4s, 14s;
+}
+
+.d2 {
+    position: absolute;
+    background-image: url(https://cdn5.vectorstock.com/i/1000x1000/32/99/abstract-geometric-background-with-triangles-vector-20903299.jpg);
+    background-size: 2700px 1500px;
+    height: 50vh;
+    width: 25vw;
+    background-position: -10vw 50%;
+    left: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd2 10s 2;
+    animation-delay: 4s;
+}
+
+.d3 {
+    position: absolute;
+    background-image: url(https://cdn5.vectorstock.com/i/1000x1000/32/99/abstract-geometric-background-with-triangles-vector-20903299.jpg);
+    background-size: 2700px 1500px;
+    overflow: hidden;
+    height: 100vh;
+    width: 40vw;
+    left: 25vw;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    background-position: -35vw 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    animation: dd3 10s 2;
+    animation-delay: 4s;
+}
+
+.d4 {
+    position: absolute;
+    overflow: hidden;
+    background-image: url(https://cdn5.vectorstock.com/i/1000x1000/32/99/abstract-geometric-background-with-triangles-vector-20903299.jpg);
+    background-size: 2700px 1500px;
+    height: 80vh;
+    width: 25vw;
+    left: 60vw;
+    background-position: -70vw 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd4 10s 2;
+    animation-delay: 4s;
+}
+
+@keyframes dd1 {
+    0% {}
+    50% {
+        width: 95vw;
+    }
+}
+
+@keyframes dd12 {
+    0% {}
+    50% {
+        background-position: Calc(0vw - 40px) 50%;
+    }
+}
+
+@keyframes dd2 {
+    0% {}
+    50% {
+        background-position: Calc(-10vw - 40px) 50%;
+    }
+}
+
+@keyframes dd3 {
+    0% {}
+    50% {
+        background-position: Calc(-35vw - 40px) 50%;
+    }
+}
+
+@keyframes dd4 {
+    0% {}
+    50% {
+        background-position: Calc(-70vw - 40px) 50%;
+    }
 }
 
 /*home section */
@@ -216,7 +318,14 @@ section .title::after {
     content: "who I am";
 }
 
-.home .home-content .work .work-content {
+/*.home .home-content{
+    display: flex;
+}*/
+
+.home .home-content
+/*.work .work-content*/
+
+    {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -245,7 +354,7 @@ section .title::after {
 }
 
 .home .home-content .right .text span {
-    color: crimson;
+    color: mediumseagreen;
 }
 
 .home .home-content .right p {
@@ -254,19 +363,19 @@ section .title::after {
 
 .home .home-content .right a {
     display: inline-block;
-    background: crimson;
+    background: mediumseagreen;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid mediumseagreen;
     transition: all 0.3s ease;
 }
 
 .home .home-content .right a:hover {
-    color: crimson;
+    color: mediumseagreen;
     background: none;
 }
 
@@ -274,7 +383,7 @@ section .title::after {
 
 .work {
     color: #fff;
-    background: #111;
+    background:#111;
 }
 
 .work .title::before {
@@ -307,7 +416,7 @@ section .title::after {
 
 .work .work-content .card i {
     font-size: 50px;
-    color: crimson;
+    color: mediumseagreen;
     transition: color 0.3s ease;
 }
 
@@ -343,20 +452,20 @@ section .title::after {
 
 .skills .skills-content .left a {
     display: inline-block;
-    background: crimson;
-    color: #fff;
+    background: rmediumseagreen;
+    color:#111;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid mediumseagreen;
     transition: all 0.3s ease;
 }
 
 .skills .skills-content .left a:hover {
-    color: crimson;
-    background: none;
+    color:#111;
+    background: mediumseagreen;
 }
 
 .skills .skills-content .right .bar {
@@ -388,7 +497,7 @@ section .title::after {
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: mediumseagreen;
 }
 
 .skills .skills-content .html::before {
@@ -409,7 +518,18 @@ section .title::after {
 
 /* contact section styling */
 
+.contact {
+    background:darkslategrey;
+}
+.contact .title::before {
+    background: #fff;
+}
+.contact .title {
+    color:#fff;
+}
+
 .contact .title::after {
+    background:darkslategrey;
     content: "get in touch";
 }
 
@@ -443,7 +563,7 @@ section .title::after {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: crimson;
+    color: mediumseagreen;
 }
 
 .contact .contact-content .info .head {
@@ -469,16 +589,15 @@ section .title::after {
     width: 100%;
 }
 
-.contact .right form .field .name{
+.contact .right form .field .name {
     margin-right: 10px;
 }
 
-.contact .right form .field .email{
+.contact .right form .field .email {
     margin-left: 10px;
 }
 
-.contact .right form .field input, 
-.contact .right form .textarea textarea{
+.contact .right form .field input, .contact .right form .textarea textarea {
     height: 100px;
     width: 100%;
     border: 1px solid lightgray;
@@ -489,9 +608,9 @@ section .title::after {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.contact .right form .textarea textarea{
-padding-top: 10px;
-resize: none;
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
 }
 
 .contact .right form .button {
@@ -499,11 +618,11 @@ resize: none;
     width: 170px;
 }
 
-.contact .right form .button button{
+.contact .right form .button button {
     height: 100%;
-    width: 100%; 
-    border: 2px solid crimson ;
-    background: crimson;
+    width: 100%;
+    border: 2px solid mediumseagreen;
+    background: mediumseagreen;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -513,25 +632,25 @@ resize: none;
 }
 
 .contact .right form .button button:hover {
-    color: crimson;
+    color: mediumseagreen;
     background: none;
 }
 
 /* footer section start */
-.footer{
+
+.footer {
     background: #111;
     padding: 20px 23px;
 }
-.footer span a{
-    color: crimson;
+
+.footer span a {
+    color: mediumseagreen;
     text-decoration: none;
 }
 
-.footer span a:hover{
+.footer span a:hover {
     text-decoration: underline;
 }
-
-
 
 /* responsive media query start */
 
@@ -604,7 +723,7 @@ resize: none;
         width: 100%;
     }
     .home .home-content .left {
-        display: flex;
+        /*display: flex;*/
         justify-content: center;
         margin: 0 auto 60px;
     }
@@ -615,8 +734,7 @@ resize: none;
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column,
-    .contact .contact-content .column {
+    .skills .skills-content .column, .contact .contact-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
