@@ -49,7 +49,7 @@ html {
 }
 
 .navbar.sticky .logo a span {
-    color: #fff;
+    color:#fff;
 }
 
 .navbar .manu li {
@@ -682,7 +682,7 @@ section .title::after {
     }
     .menu-btn {
         display: block;
-        z-index: 999
+        z-index: 999;
     }
     .menu-btn i.active:befor {
         content: "\f00d";
