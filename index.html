@@ -14,9 +14,9 @@
 </head>
 
 <body>
-<div class="scroll-up-btn">
-    <i class="fas fa-angle-up"></i>
-</div>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Saneli<span>swa.</span></a></div>
@@ -38,11 +38,12 @@
         <div class="max-width">
             <div class="about-content">
                 <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Saneliswa Patience</div>
+                <div class="text-2">Saneliswa Majwede</div>
                 <div class="text-3">And I'm a<span>Web Developer</span></div>
                 <a href="#">Hire me</a>
-            </div>
+            </div>>
         </div>
+
     </section>
 
     <!--home section start-->
@@ -59,7 +60,7 @@
                         architecto voluptatibus. Fugiat consequuntur, nobis est ab quo maiores? Aliquam explicabo,
                         aliquid recusandae veniam eum numquam quasi!</p>
                     <!--a href="/CV OF S.P.MAJWEDE.pdf">Download CV</a -->
-                    <embed src="/CV OF S.P.MAJWEDE.pdf">Download CV</embed>
+                    <embed src="/CV OF S.P.MAJWEDE.pdf" type="application/pdf">Download CV</embed>
                 </div>
 
             </div>
@@ -201,7 +202,7 @@
                             <i class="fab fa-linkedin"></i>
                             <div class="info">
                                 <div class="head">LinkedIn</div>
-                                <div class="sub-title">Saneliswa Majwede</div>
+                                <div class="sub-title">Saneliswa Majwede </div>
                             </div>
                         </div>
 
@@ -251,14 +252,73 @@
     </section>
 
     <section>
-    <!--footer section start-->
+        <!--footer section start-->
 
-    <footer>
-        <span>Created by <a href="#"></a><span class="fas fa-copyright"> </span> 2020 All rights reserved. </span>
-    </footer>
-</section>
+        <footer>
+            <span>Created by <a href="#"></a><span class="fas fa-copyright"> </span> 2020 All rights reserved. </span>
+        </footer>
+    </section>
 
     <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+
+    <script>
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".text-1,.text-2,.text-3").lettering();
+
+            anime({
+                targets: '.text-1 span',
+                opacity: 1,
+                duration: 1500,
+                easing: 'easeInSine',
+                delay: anime.stagger(100, { start: 3000 })
+            })
+
+            anime({
+                targets: '.text-2 span',
+                opacity: 1,
+                duration: 3000,
+                easing: 'easeInSine',
+                delay: anime.stagger(100, { start: 4500 })
+            })
+
+            anime({
+                targets: '.text-2 .char2,.text-2 .char4,.text-2 .char6,.text-2 .char8,.text-2 .char10,.text-2 .char12,.text-2 .char14,.text-2 .char16',
+                
+                Keyframes:[
+                    {translateY: 100, duretion:1500}
+                ],
+                easing: 'easeInOutExpo',
+                delay: 8000,
+            
+            })
+
+            anime({
+                targets: '.text-2 .char3, .text-2 .char5, .text-2 .char7, .text-2 .char9, .text-2 .char11, .text-2 .char13, .text-2 .char15',
+                
+                Keyframes:[
+                    {translateY: -100, duretion:1500}
+                ],
+                easing: 'easeInOutExpo',
+                delay: 8000,
+            
+            })
+
+
+        
+        
+        });
+
+    </script>
 </body>
 
 </html>

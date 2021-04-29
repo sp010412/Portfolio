@@ -15,6 +15,19 @@ html {
     margin: auto;
 }
 
+/*animation */
+.text-1 span,
+.text-2 span{
+    opacity: 0;
+}
+.text-2 {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
 /*navegation bar styling*/
 
 .navbar {
