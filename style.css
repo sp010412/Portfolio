@@ -49,7 +49,8 @@ html {
 }
 
 .navbar.sticky .logo a span {
-    color:#fff;
+    color:aqua;
+    font-family: cursive;
 }
 
 .navbar .manu li {
