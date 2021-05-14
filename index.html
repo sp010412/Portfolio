@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,14 @@
         <i class="fas fa-angle-up"></i>
     </div>
     <nav class="navbar">
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
         <div class="max-width">
-            <div class="logo"><a href="#">Saneli<span>swa.</span></a></div>
+            <div class="logo"><a href="#">S@neli<span>swa.</span></a></div>
             <ul class="manu">
                 <li><a href="#about">Home</a></li>
                 <li><a href="#home">About</a></li>
@@ -27,9 +34,6 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
@@ -41,7 +45,7 @@
                 <div class="text-2">Saneliswa Majwede</div>
                 <div class="text-3">And I'm a<span>Web Developer</span></div>
                 <a href="#">Hire me</a>
-            </div>>
+            </div>
         </div>
 
     </section>
@@ -72,6 +76,29 @@
             <div class="d4"></div>
         </div>
     -->
+    </section>
+
+    <section>
+
+
+
+        <div class="tab">
+            <button class="tablinks1" onclick="openCity(event, 'Front')" id="defaultOpen">Front-End</button>
+            <button class="tablinks" onclick="openCity(event, 'Back')">Back-End</button>
+            
+        </div>
+
+        <div id="Front" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Back" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+
     </section>
 
     <!--work section start-->
@@ -292,29 +319,37 @@
             })
 
             anime({
-                targets: '.text-2 , .char2, .text-2 .char4, .text-2 .char6, .text-2 .char8, .text-2 .char10,.text-2 .char12,.text-2 .char14, .text-2 .char16', 
-                Keyframes:[
-                    {translateY: 100, duration:1500}
+                targets: '.text-3 span',
+                opacity: 1,
+                duration: 4500,
+                easing: 'easeInSine',
+                delay: anime.stagger(100, { start: 5500 })
+            })
+
+            anime({
+                targets: '.text-2 , .char2, .text-2 .char4, .text-2 .char6, .text-2 .char8, .text-2 .char10,.text-2 .char12,.text-2 .char14, .text-2 .char16',
+                Keyframes: [
+                    { translateY: 100, duration: 1500 }
                 ],
                 easing: 'easeInOutExpo',
                 delay: 8000,
-            
+
             })
 
             anime({
                 targets: '.text-2 .char3, .text-2 .char5, .text-2 .char7, .text-2 .char9, .text-2 .char11, .text-2 .char13, .text-2 .char15',
-                
-                Keyframes:[
-                    {translateY: -100, duration:1500}
+
+                Keyframes: [
+                    { translateY: -100, duration: 1500 }
                 ],
                 easing: 'easeInOutExpo',
                 delay: 8000,
-            
+
             })
 
 
-        
-        
+
+
         });
 
     </script>

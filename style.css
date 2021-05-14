@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -15,33 +18,40 @@ html {
     margin: auto;
 }
 
+/*from wow*/
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 /*animation */
-.text-1 span,
-.text-2 span{
+
+.text-1 span, .text-2 span, .text-2 span {
     opacity: 0;
 }
-.text-2 {
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-
-/*navegation bar styling*/
 
 .navbar {
     position: fixed;
     width: 100%;
     z-index: 999;
-    background: mediumseagreen;
+    padding: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
-    padding: 15px 0;
-    background: mediumseagreen;
+    background: black;
+    /*background: url(https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_625937792.jpg?w=750) no-repeat center/cover;*/
 }
 
 .navbar .max-width {
@@ -52,18 +62,25 @@ html {
 
 .navbar .logo a {
     color: #fff;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 600;
+    font-family: 'Yellowtail', cursive;
+    border: rosybrown solid;
+    background: rosybrown;
+    border-radius: 15px 50px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .navbar .logo a span {
-    color: mediumseagreen;
+    color: red;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky .logo a span {
-    color:aqua;
-    font-family: cursive;
+    color: red;
+    font-family: 'Yellowtail', cursive;
 }
 
 .navbar .manu li {
@@ -85,15 +102,6 @@ html {
 
 .navbar .sticky .manu li a:hover {
     color: #fff;
-}
-
-/* menu btn styling*/
-
-.menu-btn {
-    color: #fff;
-    font-size: 23px;
-    cursor: pointer;
-    display: none;
 }
 
 .scroll-up-btn {
@@ -125,7 +133,7 @@ html {
 
 .about {
     display: flex;
-    background: url(https://image.freepik.com/free-vector/geometric-background-memphis-style_52683-35346.jpg) no-repeat center/cover;
+    background: url(https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_625937792.jpg?w=750) no-repeat center/cover;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -224,6 +232,71 @@ section .title::after {
     padding: 5px;
     background: #fff;
     transform: translateX(-50%);
+}
+
+/* Style the tab */
+
+.tablinks1 {
+    background-color: #555;
+    color: white;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+.tablinks2 {
+    background-color: #555;
+    color: white;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
 /* animated background*/
@@ -400,7 +473,7 @@ section .title::after {
 
 .work {
     color: #fff;
-    background:#111;
+    background: #111;
 }
 
 .work .title::before {
@@ -470,7 +543,7 @@ section .title::after {
 .skills .skills-content .left a {
     display: inline-block;
     background: rmediumseagreen;
-    color:#111;
+    color: #111;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
@@ -481,7 +554,7 @@ section .title::after {
 }
 
 .skills .skills-content .left a:hover {
-    color:#111;
+    color: #111;
     background: mediumseagreen;
 }
 
@@ -536,17 +609,19 @@ section .title::after {
 /* contact section styling */
 
 .contact {
-    background:darkslategrey;
+    background: darkslategrey;
 }
+
 .contact .title::before {
     background: #fff;
 }
+
 .contact .title {
-    color:#fff;
+    color: #fff;
 }
 
 .contact .title::after {
-    background:darkslategrey;
+    background: darkslategrey;
     content: "get in touch";
 }
 
@@ -694,23 +769,21 @@ section .title::after {
     .max-width {
         padding: 0 50px;
     }
-    .menu-btn {
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:befor {
-        content: "\f00d";
+    #check {
+        display: none;
     }
     .navbar .menu {
         position: fixed;
         height: 100vh;
         width: 100%;
         left: -100%;
-        top: 0;
+        top: 80px;
         background: #111;
         text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
+        transition: all .5s ease;
+    }
+    #check:checked~ul {
+        left: 0;
     }
     .navbar .menu .active {
         left: 0;
